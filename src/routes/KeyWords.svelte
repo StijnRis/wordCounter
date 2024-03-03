@@ -38,7 +38,22 @@
     table {
         border-width: 1px;
         border-style: solid;
+        border-radius: var(--border--radius);
         border-color: var(--accent);
+    }
+
+    td {
+        text-align: center;
+    }
+
+    tr {
+        border-width: 1px 0px;
+        border-color: var(--accent);
+    }
+
+    tr:nth-child(2n) {
+        background-color: var(--bg--sheet);
         border-radius: var(--border--radius);
     }
+
 </style>
