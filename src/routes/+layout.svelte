@@ -16,7 +16,7 @@
             --text--secondary: #0000008f;
             --bg--page: #f6f5f0;
             --bg--sheet: #ffffff;
-            --accent: #e15a46;
+            --accent: #00cfff4d;
         }
     }
 
@@ -26,7 +26,7 @@
             --text--secondary: #ffffff8f;
             --bg--page: #202124;
             --bg--sheet: #555555;
-            --accent: #e15a46;
+            --accent: #00cfff4d;
         }
     }
 

@@ -21,16 +21,16 @@
 
 <table>
     <tr>
-        <th>Word</th>
-        <th>Occerunces</th>
-        <th>Percentage</th>
+        <th class="wordColumn">Word</th>
+        <th class="occurrencesColumn">Occurrences</th>
+        <th class="percentageColumn">Percentage</th>
     </tr>
     {#each wordsRanked as word}
-    <tr>
-        <td>{word[0]}</td>
-        <td>{word[1]}</td>
-        <td>{Math.round(word[1] / total * 100)}%</td>
-    </tr>    
+        <tr>
+            <td>{word[0]}</td>
+            <td>{word[1]}</td>
+            <td>{Math.round((word[1] / total) * 100)}%</td>
+        </tr>
     {/each}
 </table>
 
@@ -40,10 +40,24 @@
         border-style: solid;
         border-radius: var(--border--radius);
         border-color: var(--accent);
+        width: 100%;
+    }
+
+    .wordColumn {
+        width: 50%;
+    }
+
+    .occurrencesColumn {
+        width: 25%;
+    }
+
+    .percentageColumn {
+        width: 25;
     }
 
     td {
         text-align: center;
+        word-break: break-all;
     }
 
     tr {
@@ -55,5 +69,4 @@
         background-color: var(--bg--sheet);
         border-radius: var(--border--radius);
     }
-
 </style>
