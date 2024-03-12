@@ -3,7 +3,7 @@
     console.log(value);
 </script>
 
-<textarea id="input" bind:value={value}></textarea>
+<textarea id="input" bind:value></textarea>
 
 <style>
     #input {
@@ -21,7 +21,11 @@
         box-sizing: border-box;
         padding: 5px;
 
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+
+        white-space: break-spaces;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
 </style>

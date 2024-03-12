@@ -41,6 +41,7 @@
         border-radius: var(--border--radius);
         border-color: var(--accent);
         width: 100%;
+        border-collapse: collapse;
     }
 
     .wordColumn {

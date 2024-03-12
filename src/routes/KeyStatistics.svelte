@@ -6,14 +6,14 @@
 
     const readingSpeed = 255 / 60;
     const speakingSpeed = 180 / 60;
-    $: console.log(text.match(/(\w[.?!](\s|$))/g))
+    $: console.log(text.match(/(\w[.?!](\s|$))/g));
 
     $: amountOfWords = words.length;
     $: amountOfCharacters = text.length;
-    $: sentences = text.match(/\w[.?!](\s|$)/g)
+    $: sentences = text.match(/\w[.?!](\s|$)/g);
     $: amountOfSentences = sentences ? sentences.length : 0;
-    $: readingTime = amountOfCharacters / readingSpeed;
-    $: speakingTime = amountOfCharacters / speakingSpeed;
+    $: readingTime = amountOfWords / readingSpeed;
+    $: speakingTime = amountOfWords / speakingSpeed;
 </script>
 
 <div class="container">

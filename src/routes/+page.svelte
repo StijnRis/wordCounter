@@ -1,15 +1,16 @@
-<script>
+<script lang="ts">
     import Information from "./Information.svelte";
     import InputField from "./InputField.svelte";
     import Statistics from "./KeyStatistics.svelte";
     import KeyWords from "./KeyWords.svelte";
 
     let text = "";
-    $: words = text.split(/\s+/);
+    $: words = text.match(/\b(\w+)\b/g) as string[];
     $: {
-        if (words.length == 1 && words[0] == "") {
+        if (words == null) {
             words = [];
         }
+        console.log(words);
     }
 </script>
 
@@ -54,7 +55,7 @@
 
     #content {
         max-width: 1200px;
-        margin: 50px;
+        margin: 0px 50px;
 
         display: grid;
         gap: 20px;
